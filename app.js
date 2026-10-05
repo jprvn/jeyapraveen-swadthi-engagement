@@ -20,6 +20,10 @@
       q: ['How do I save the dates?', 'தேதிகளை எப்படிச் சேமிப்பது?'],
       a: ['Each event card has a Google Calendar link and an Apple / Outlook calendar download. All times use IST (UTC+05:30). The reception reminder marks the 6 PM start only; no finish time is announced.', 'ஒவ்வொரு நிகழ்ச்சி அட்டையிலும் Google Calendar இணைப்பும் Apple / Outlook நாள்காட்டி பதிவிறக்கமும் உள்ளன. அனைத்தும் இந்திய நேரப்படி (UTC+05:30). வரவேற்பு நினைவூட்டல் மாலை 6 மணி தொடக்கத்தை மட்டும் குறிக்கும்; முடிவு நேரம் அறிவிக்கப்படவில்லை.']
     },
+    travel: {
+      q: ['Where can I book travel tickets?', 'பயணச் சீட்டுகளை எங்கே முன்பதிவு செய்வது?'],
+      a: ['The Travel section has redBus links from Chennai, Madurai, Bengaluru and Hyderabad to Coimbatore, plus the official IRCTC booking portal. Choose your stations and journey date on the provider’s site. Check live schedules, fares and availability there, and allow time to reach the mahal. Guest transport and accommodation have not been confirmed.', 'பயணப் பகுதியில் சென்னை, மதுரை, பெங்களூரு மற்றும் ஹைதராபாதிலிருந்து கோயம்புத்தூருக்கு redBus இணைப்புகளும் அதிகாரப்பூர்வ IRCTC முன்பதிவு இணைப்பும் உள்ளன. முன்பதிவு தளத்தில் நிலையங்களையும் பயணத் தேதியையும் தேர்ந்தெடுத்து கட்டணம், நேரம் மற்றும் இருக்கை விவரங்களைச் சரிபார்க்கவும். மண்டபத்திற்கு வர நேரம் ஒதுக்குங்கள். விருந்தினர் போக்குவரத்து மற்றும் தங்குமிடம் உறுதிசெய்யப்படவில்லை.']
+    },
     unknown: {
       q: ['What about parking, food or accommodation?', 'வாகன நிறுத்தம், உணவு அல்லது தங்குமிடம் பற்றி?'],
       a: ['I don’t have confirmed information about that. Please check directly with the couple or their families. I can help with the wedding time, reception, venue, directions and calendar.', 'அது பற்றிய உறுதிசெய்யப்பட்ட தகவல் என்னிடம் இல்லை. மணமக்கள் அல்லது அவர்களின் குடும்பத்தினரிடம் நேரடியாகக் கேளுங்கள். திருமண நேரம், வரவேற்பு, மண்டபம், வழிகாட்டி மற்றும் நாள்காட்டி பற்றி உதவ முடியும்.']
@@ -29,7 +33,8 @@
     wedding: 'wedding', muhurtham: 'wedding', marriage: 'wedding', 'wedding time': 'wedding', 'wedding date': 'wedding', 'when is the wedding': 'wedding', 'what time is the wedding': 'wedding', 'when is the muhurtham': 'wedding', 'what is the wedding date': 'wedding', 'திருமணம்': 'wedding', 'திருமண நேரம்': 'wedding', 'திருமணம் எப்போது': 'wedding', 'முகூர்த்தம்': 'wedding', 'முகூர்த்த நேரம்': 'wedding',
     reception: 'reception', 'reception time': 'reception', 'reception date': 'reception', 'when is the reception': 'reception', 'what time is the reception': 'reception', 'வரவேற்பு': 'reception', 'வரவேற்பு எப்போது': 'reception', 'வரவேற்பு நேரம்': 'reception',
     venue: 'venue', location: 'venue', directions: 'venue', maps: 'venue', 'where is the wedding': 'venue', 'where is the reception': 'venue', 'how do i get there': 'venue', 'are both events at the same venue': 'venue', 'மண்டபம்': 'venue', 'இடம்': 'venue', 'வழிகாட்டி': 'venue', 'திருமணம் எங்கே': 'venue', 'வரவேற்பு எங்கே': 'venue',
-    calendar: 'calendar', 'save the date': 'calendar', 'save dates': 'calendar', 'how do i save the dates': 'calendar', 'add to calendar': 'calendar', 'நாள்காட்டி': 'calendar', 'தேதிகளை எப்படிச் சேமிப்பது': 'calendar'
+    calendar: 'calendar', 'save the date': 'calendar', 'save dates': 'calendar', 'how do i save the dates': 'calendar', 'add to calendar': 'calendar', 'நாள்காட்டி': 'calendar', 'தேதிகளை எப்படிச் சேமிப்பது': 'calendar',
+    travel: 'travel', 'travel tickets': 'travel', 'bus tickets': 'travel', 'train tickets': 'travel', 'where can i book travel tickets': 'travel', redbus: 'travel', irctc: 'travel', 'பயணம்': 'travel', 'பயணச் சீட்டுகள்': 'travel'
   };
   function classify(question) {
     // Exact approved phrases only. Mixed questions and unsupported claims fall back.

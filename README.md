@@ -15,7 +15,13 @@ See `VERIFICATION.md` for source conflicts and the final owner confirmation that
 
 ## Guest features
 
-Tamil/English switching, directions, per-event Google Calendar and Apple/Outlook downloads, WhatsApp sharing, countdown, static FAQ and a private deterministic question assistant. Unknown questions return an explicit unconfirmed-information response. No API credentials, backend or guest-question storage. The engineering section explains the actual technology and privacy choices.
+Tamil/English switching, directions, per-event Google Calendar and Apple/Outlook downloads, WhatsApp sharing, countdown, static FAQ and a private deterministic question assistant. Unknown questions return an explicit unconfirmed-information response. No API credentials, backend or guest-question storage.
+
+The new floral garden design includes a gold-sealed envelope that opens on scroll, swipe, tap or keyboard; layered original flower imagery; pastel peach and sage alongside dusty plum and teal; gold and silver trim; gently drifting petals; hover depth; scroll reveals; and a pause-motion control that respects reduced-motion settings. Every guest-facing technology credit has been removed, including the social sharing artwork.
+
+An original gentle instrumental soundscape is synthesized locally with Web Audio. It starts only on the Play music button, can be muted, and suspends when the tab is hidden. No licensed recording or external audio request is used. `assets/ARTWORK.md` records the image prompts.
+
+The Travel section links to redBus routes from Chennai, Madurai, Bengaluru and Hyderabad to Coimbatore and the official IRCTC booking portal. Dates, fares, schedules and seat availability must be checked with the booking provider. No transport or accommodation arrangements are implied.
 
 ## Preserve engagement
 
