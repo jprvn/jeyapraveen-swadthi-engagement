@@ -24,8 +24,8 @@ const server = http.createServer((req, res) => {
     const card = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
     const peacock = fs.readFileSync(path.join(root, 'assets/peacock.svg'), 'utf8');
     const renderCard = async () => {
-      const image = fs.readFileSync(path.join(root,'assets/floral-arch.webp')).toString('base64');
-      await card.setContent('<html><body style="margin:0;background:#fcf4ec;color:#714350;font-family:Georgia,serif"><div style="position:absolute;inset:23px;border:1px solid #b99a63;border-right-color:#b8c4ce;display:flex;align-items:center;gap:60px;padding:35px"><img src="data:image/webp;base64,'+image+'" style="width:330px;height:510px;object-fit:cover;border-radius:170px 170px 8px 8px;box-shadow:10px 10px 0 #e5d5c9"><div><p style="font:12px Arial;letter-spacing:4px;color:#a17c45">WITH LOVE, FROM OUR FAMILIES</p><h1 style="font-size:70px;font-weight:400;margin:32px 0">Praveen<br>& Swadthi</h1><p style="font-size:25px">15 & 16 November 2026</p><p style="font-size:19px">Sree Lakshmi Narayan Mahal</p><p style="font:14px Arial;color:#7b6b6e">Coimbatore · A beautiful beginning</p></div></div></body></html>');
+      const image = fs.readFileSync(path.join(root,'assets/velvet-garden.webp')).toString('base64');
+      await card.setContent('<html><body style="margin:0;background:#281720;color:#f5eee3;font-family:Georgia,serif"><div style="position:absolute;inset:23px;border:1px solid #b99a63;border-right-color:#b8c4ce;display:flex;align-items:center;gap:60px;padding:35px"><img src="data:image/webp;base64,'+image+'" style="width:330px;height:510px;object-fit:cover;border-radius:170px 170px 8px 8px;box-shadow:10px 10px 0 #65434e"><div><p style="font:12px Arial;letter-spacing:4px;color:#d3b47a">WITH LOVE, FROM OUR FAMILIES</p><h1 style="font-size:70px;font-weight:400;margin:32px 0">Praveen<br>& Swadthi</h1><p style="font-size:25px">15 & 16 November 2026</p><p style="font-size:19px">Sree Lakshmi Narayan Mahal</p><p style="font:14px Arial;color:#cbb8bb">Coimbatore · A beautiful beginning</p></div></div></body></html>');
       await card.screenshot({path:path.join(root,'assets/social-card.png')});
     };
     fs.mkdirSync(path.join(root, 'engagement/assets'), { recursive: true });
@@ -110,7 +110,7 @@ const server = http.createServer((req, res) => {
     assert.equal(await page.locator('#memories').count(),0,'Empty gallery must stay hidden');
     const gallery=await browser.newPage(); await gallery.emulateMedia({reducedMotion:'reduce'});
     await gallery.route('**/memories.json',route=>route.fulfill({contentType:'application/json',body:JSON.stringify({photos:[{src:'assets/memories/test-photo.webp',alt:'Test fixture only',caption:'Test memory'}],trackingEnabled:true,interestEndpoint:'https://example.test/interest'})}));
-    await gallery.route('**/assets/memories/test-photo.webp',route=>route.fulfill({contentType:'image/webp',body:fs.readFileSync(path.join(root,'assets/floral-arch.webp'))}));
+    await gallery.route('**/assets/memories/test-photo.webp',route=>route.fulfill({contentType:'image/webp',body:fs.readFileSync(path.join(root,'assets/velvet-garden.webp'))}));
     let interestSent=null;
     await gallery.route('https://example.test/interest',route=>{interestSent=route.request().postDataJSON();return route.fulfill({contentType:'application/json',body:JSON.stringify({saved:true})});});
     await gallery.goto('http://127.0.0.1:8877/',{waitUntil:'networkidle'});
