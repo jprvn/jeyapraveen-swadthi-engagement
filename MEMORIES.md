@@ -1,3 +1,9 @@
+# Love journey — on hold
+
+Latest approved direction: five owner-provided photographs from five years, with a verified year for each. Display them in one pinned frame; scrolling changes the photograph, year and a four-to-five-word slogan. Provide tap/keyboard controls and a reduced-motion option. No placeholder photographs or invented relationship history. Wait for Praveen to supply all five photographs and explanations before implementing or publishing this section.
+
+The current gallery remains hidden. The carousel described below is an earlier foundation; it must be replaced with this single-frame journey when the photos arrive.
+
 # Engagement memories: ready for real photographs
 
 The gallery is intentionally hidden because no engagement photographs have been supplied. No stock or generated image is presented as an engagement photo. `memories.json` has an empty photo list and tracking disabled.
