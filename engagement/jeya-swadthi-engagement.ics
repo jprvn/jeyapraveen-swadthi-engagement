@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jeya Praveen and Swadthi//Engagement//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:jeya-swadthi-engagement-20260831@invite
+DTSTAMP:20260711T060000Z
+DTSTART;TZID=Asia/Kolkata:20260831T180000
+DTEND;TZID=Asia/Kolkata:20260831T220000
+SUMMARY:Engagement of Jeya Praveen & Swadthi
+LOCATION:IKON by Annapoorna\, 75\, E Arokiasamy Rd\, R.S. Puram\, Coimbatore\, Tamil Nadu 641002
+DESCRIPTION:Together with our families\, we joyfully invite you to celebrate our engagement. Google Maps: https://maps.app.goo.gl/nw9fnqBpGJycSZPx5
+URL:https://maps.app.goo.gl/nw9fnqBpGJycSZPx5
+END:VEVENT
+END:VCALENDAR

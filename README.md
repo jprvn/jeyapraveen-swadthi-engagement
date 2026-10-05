@@ -1,57 +1,36 @@
-# Jeya Praveen & Swadthi — Interactive Engagement Invitation
+# Praveen & Swadthi — Wedding invitation
 
-A mobile-first interactive invitation designed for GitHub Pages.
+Mobile-first, English/Tamil wedding invitation in maroon, gold and peacock blue.
 
-## Deploy in under 5 minutes
+Guest website: https://jprvn.github.io/jeyapraveen-swadthi-engagement/
 
-1. Create a new GitHub repository.
-2. Upload every file and folder from this package to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose:
-   - Source: **Deploy from a branch**
-   - Branch: **main**
-   - Folder: **/(root)**
-5. Save. GitHub will display your public invitation URL.
+## Confirmed celebrations
 
-## Edit the invitation
+- Reception: Sunday 15 November 2026, 6 PM onwards IST.
+- Wedding: Monday 16 November 2026, 8:30–9:30 AM IST.
+- Both: Sree Lakshmi Narayan Mahal, Coimbatore.
+- Directions: https://maps.app.goo.gl/uSTjdnq1pmb58Cub6
 
-Open `config.js`. All editable event content is grouped there:
-- Couple names
-- Date and time
-- Venue and address
-- Google Maps link
-- Share message
-- Future photo/gallery/live-stream URLs
+See `VERIFICATION.md` for source conflicts and the final owner confirmation that supersedes the printed times.
 
-Replace `assets/hero-invitation.png` to change the invitation artwork while keeping the same website.
+## Guest features
 
-## Add guest photo uploads later
+Tamil/English switching, directions, per-event Google Calendar and Apple/Outlook downloads, WhatsApp sharing, countdown, static FAQ and a private deterministic question assistant. Unknown questions return an explicit unconfirmed-information response. No API credentials, backend or guest-question storage. The engineering section explains the actual technology and privacy choices.
 
-The fastest options are:
-- Google Form with file upload
-- Microsoft Form with file upload
-- Firebase Storage
-- Cloudinary upload widget
+## Preserve engagement
 
-Paste the final upload link into:
+`engagement/` contains all six original files, unchanged, from commit `98f6c54`. The original root `.ics` also remains in place. The original repository omitted its referenced image; a labelled replacement illustration makes the archived page usable. Original Git history is retained.
 
-```js
-future: {
-  photoUploadUrl: "YOUR_LINK_HERE"
-}
-```
+## Preview and test
 
-## Recommended future upgrades
+No build step is required. With Node installed, `npm run serve` opens a local server at `http://127.0.0.1:8765/`.
 
-- Event timeline for engagement, reception and wedding
-- Guest photo wall
-- Live-stream button
-- RSVP form
-- Parking and travel instructions
-- Accommodation information
-- Thank-you page after the event
-- Photo gallery and downloadable album
+For browser tests, install the development dependency (`npm install`) and Microsoft Edge. Run `npm test`. In a bundled Codex runtime, `PLAYWRIGHT_MODULE` may point to its existing Playwright module. Tests exercise English/Tamil phone, tablet and desktop layouts, calendars, safe FAQ fallback, sharing, archive and no-JavaScript content. Screenshots are written to ignored `test-results/`. The test also renders the social preview and labelled archive illustration from the site's own vector artwork.
 
-## Important
+## Deployment and future edits
 
-The invitation uses a Google Fonts connection. The site still works if fonts fail, but will use fallback fonts.
+The existing GitHub Pages configuration publishes the root site from `main`. Publish using normal commits; never force-push over historical commits.
+
+Final facts live in `config.js`; accessible static event text lives in `index.html`, answer text in `app.js`, and calendar downloads in the two `.ics` files. Keep all representations synchronized and verify in the browser after edits. Calendar lines use CRLF and RFC 5545 folding. `node tests/finalize.cjs` folds the calendar files and supplies the static FAQ on first assembly.
+
+The root service worker migrates the old engagement cache and does not intercept wedding requests. Google Fonts is optional; system fonts are the fallback. No invitation PDF is publicly distributed because the printed timing differs from the owner's final confirmation.

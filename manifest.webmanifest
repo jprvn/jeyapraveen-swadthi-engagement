@@ -1,9 +1,1 @@
-{
-  "name": "Jeya Praveen & Swadthi \u2014 Engagement",
-  "short_name": "Jeya \u2665 Swadthi",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#fbf8f2",
-  "theme_color": "#f7f3ec",
-  "icons": []
-}
+{"name":"Praveen & Swadthi — Wedding","short_name":"P & S Wedding","start_url":"./","scope":"./","display":"standalone","background_color":"#faf6ed","theme_color":"#601d32","icons":[{"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]}

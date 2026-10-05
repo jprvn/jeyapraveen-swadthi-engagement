@@ -1,6 +1,8 @@
-
-const CACHE="engagement-invite-v1";
-const ASSETS=["./","./index.html","./config.js","./manifest.webmanifest","./assets/hero-invitation.png","./jeya-swadthi-engagement.ics"];
-self.addEventListener("install",e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS))));
-self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));
-self.addEventListener("fetch",e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
+/* Network-first migration. Wedding facts must not be served from an old cache. */
+self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('activate', event => event.waitUntil((async () => {
+  const old = ['engagement-invite-v1'];
+  await Promise.all(old.map(key => caches.delete(key)));
+  await self.clients.claim();
+})()));
+// Intentionally no fetch interception or wedding-fact cache.

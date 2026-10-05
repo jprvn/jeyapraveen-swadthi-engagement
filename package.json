@@ -1,0 +1,1 @@
+{"name":"praveen-swadthi-wedding","private":true,"scripts":{"test":"node tests/browser.cjs","serve":"node tests/serve.cjs"},"devDependencies":{"playwright":"^1.58.0"}}

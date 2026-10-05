@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Praveen and Swadthi//Wedding Invitation//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTAMP:20261005T000000Z
+UID:reception-2026@jprvn.github.io
+DTSTART:20261115T123000Z
+SUMMARY:Praveen & Swadthi - Reception start
+LOCATION:Sree Lakshmi Narayan Mahal\, Coimbatore
+DESCRIPTION:Reception 6 PM onwards IST. Start reminder only; finish time no
+ t confirmed.
+URL:https://jprvn.github.io/jeyapraveen-swadthi-engagement/
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Celebration reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
