@@ -7,7 +7,7 @@ Guest website: https://jprvn.github.io/jeyapraveen-swadthi-engagement/
 ## Confirmed celebrations
 
 - Reception: Sunday 15 November 2026, 6 PM onwards IST.
-- Wedding: Monday 16 November 2026, 8:30–9:30 AM IST.
+- Wedding: Monday 16 November 2026, 9:00–10:00 AM IST.
 - Both: Sree Lakshmi Narayan Mahal, Coimbatore.
 - Directions: https://maps.app.goo.gl/uSTjdnq1pmb58Cub6
 

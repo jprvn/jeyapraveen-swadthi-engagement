@@ -1,16 +1,16 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Praveen and Swadthi//Wedding Invitation//EN
+PRODID:-//Jeya Praveen and Swadthi//Wedding Invitation//EN
 CALSCALE:GREGORIAN
-METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTAMP:20261005T000000Z
 UID:wedding-2026@jprvn.github.io
-DTSTART:20261116T030000Z
-DTEND:20261116T040000Z
-SUMMARY:Praveen & Swadthi - Wedding
+DTSTAMP:20261102T000000Z
+DTSTART:20261116T033000Z
+DTEND:20261116T043000Z
+SEQUENCE:1
+SUMMARY:Jeya Praveen V & Swadthi N G - Wedding Muhurtham
 LOCATION:Sree Lakshmi Narayan Mahal\, Coimbatore
-DESCRIPTION:Muhurtham 8:30-9:30 AM IST. Owner-confirmed final timing.
+DESCRIPTION:Muhurtham 9:00-10:00 AM IST. Venue Sree Lakshmi Narayan Mahal\, Coimbatore.
 URL:https://jprvn.github.io/jeyapraveen-swadthi-engagement/
 BEGIN:VALARM
 TRIGGER:-PT1H

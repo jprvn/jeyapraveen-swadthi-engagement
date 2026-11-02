@@ -6,7 +6,7 @@
   const knowledge = {
     wedding: {
       q: ['When is the wedding?', 'திருமணம் எப்போது?'],
-      a: ['The wedding is on Monday, 16 November 2026. Muhurtham is 8:30–9:30 AM IST at Sree Lakshmi Narayan Mahal, Coimbatore.', 'திருமணம் திங்கள், 16 நவம்பர் 2026 அன்று நடைபெறும். முகூர்த்தம் காலை 8:30–9:30, இந்திய நேரப்படி. இடம்: Sree Lakshmi Narayan Mahal, கோயம்புத்தூர்.']
+      a: ['The wedding is on Monday, 16 November 2026. Muhurtham is 9:00–10:00 AM IST at Sree Lakshmi Narayan Mahal, Coimbatore.', 'திருமணம் திங்கள், 16 நவம்பர் 2026 அன்று நடைபெறும். முகூர்த்தம் காலை 9:00–10:00, இந்திய நேரப்படி. இடம்: Sree Lakshmi Narayan Mahal, கோயம்புத்தூர்.']
     },
     reception: {
       q: ['When is the reception?', 'வரவேற்பு எப்போது?'],
@@ -72,13 +72,13 @@
   }
   const calendarUrl = (kind) => {
     const event = facts[kind];
-    const params = new URLSearchParams({ action: 'TEMPLATE', text: `${facts.names.display} — ${kind === 'wedding' ? 'Wedding' : 'Reception (start reminder)'}`, dates: `${event.utc}/${event.end || event.utc}`, location: `${facts.venue}, ${facts.city}`, details: `${kind === 'reception' ? '6 PM onwards IST. This reminder marks the start only; finish time is not confirmed.' : 'Muhurtham: 8:30–9:30 AM IST.'}\nDirections: ${facts.maps}\nInvitation: ${facts.url}`, ctz: 'Asia/Kolkata' });
+    const params = new URLSearchParams({ action: 'TEMPLATE', text: `${facts.names.display} — ${kind === 'wedding' ? 'Wedding' : 'Reception (start reminder)'}`, dates: `${event.utc}/${event.end || event.utc}`, location: `${facts.venue}, ${facts.city}`, details: `${kind === 'reception' ? '6 PM onwards IST. This reminder marks the start only; finish time is not confirmed.' : 'Muhurtham: 9:00–10:00 AM IST.'}\nDirections: ${facts.maps}\nInvitation: ${facts.url}`, ctz: 'Asia/Kolkata' });
     return `https://calendar.google.com/calendar/render?${params}`;
   };
   document.querySelector('#reception-google').href = calendarUrl('reception');
   document.querySelector('#wedding-google').href = calendarUrl('wedding');
   document.querySelectorAll('[data-maps]').forEach(link => { link.href = facts.maps; });
-  const shareText = `You are warmly invited to celebrate Praveen & Swadthi! Reception: Sunday, 15 November 2026, 6 PM onwards. Wedding: Monday, 16 November 2026, 8:30–9:30 AM IST. Both at Sree Lakshmi Narayan Mahal, Coimbatore. ${facts.url}`;
+  const shareText = `You are warmly invited to celebrate Jeya Praveen V & Swadthi N G! Reception: Sunday, 15 November 2026, 6 PM onwards. Wedding: Monday, 16 November 2026, 9:00–10:00 AM IST. Both at Sree Lakshmi Narayan Mahal, Coimbatore. ${facts.url}`;
   document.querySelectorAll('.whatsapp').forEach(link => { link.href = `https://wa.me/?text=${encodeURIComponent(shareText)}`; });
   document.querySelector('#language').addEventListener('click', () => setLanguage(language === 'en' ? 'ta' : 'en'));
   document.querySelectorAll('[data-question]').forEach(button => button.addEventListener('click', () => showAnswer(button.dataset.question)));

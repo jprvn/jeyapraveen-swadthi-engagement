@@ -10,7 +10,7 @@ Reviewed the original invitation image and all three pages of the two supplied P
 - Owner-supplied directions: https://maps.app.goo.gl/uSTjdnq1pmb58Cub6
 - No verified parking, accommodation, meal, dress-code, livestream or RSVP information. Do not invent these.
 
-On 5 October 2026 the owner confirmed reception Sunday 15 November 2026, 6 PM onwards; wedding Monday 16 November 2026, 8:30–9:30 AM; Sree Lakshmi Narayan Mahal, Coimbatore, for both events. This explicit confirmation supersedes both printed muhurtham times. It is the authoritative source for the website, calendar files, sharing text and FAQ. No reception end time was supplied; calendar reminders mark its start only.
+On 5 October 2026 the owner confirmed reception Sunday 15 November 2026, 6 PM onwards; wedding Monday 16 November 2026, 9:00–10:00 AM; Sree Lakshmi Narayan Mahal, Coimbatore, for both events. This explicit confirmation supersedes both printed muhurtham times. It is the authoritative source for the website, calendar files, sharing text and FAQ. No reception end time was supplied; calendar reminders mark its start only.
 
 ## Existing engagement
 

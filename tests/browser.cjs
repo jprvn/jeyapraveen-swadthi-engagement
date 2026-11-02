@@ -39,7 +39,7 @@ const server = http.createServer((req, res) => {
     page.on('response', r => { if (r.url().startsWith('http://127.0.0.1') && r.status() >= 400) failedLocal.push(r.url()); });
     await page.goto('http://127.0.0.1:8877/', { waitUntil: 'networkidle' });
     await page.locator('#gate-open').click(); await page.locator('#envelope-gate').waitFor({state:'hidden'}); await page.locator('h1').waitFor();
-    assert.match(await page.locator('body').innerText(), /8:30–9:30 AM/);
+    assert.match(await page.locator('body').innerText(), /9:00–10:00 AM/);
     assert.doesNotMatch(await page.locator('body').innerText(), /\bAI\b|engineering|engineers|full.stack/i);
     assert.equal(await page.evaluate(() => window.__testAudio.length),0,'Music must not autoplay');
     await page.locator('#music-toggle').click();
@@ -76,22 +76,22 @@ const server = http.createServer((req, res) => {
     }
     if (await page.locator('html').getAttribute('lang') !== 'en') await page.locator('#language').click();
     await page.locator('[data-question=wedding]').click();
-    assert.match(await page.locator('#answer').innerText(), /Monday, 16 November 2026.*8:30–9:30 AM IST/);
+    assert.match(await page.locator('#answer').innerText(), /Monday, 16 November 2026.*9:00–10:00 AM IST/);
     const ask = async text => { await page.locator('#question').fill(text); await page.locator('#ask-form button').click(); return page.locator('#answer').innerText(); };
     assert.match(await ask('When is the reception?'), /6:00 PM onwards/);
     for (const q of ['Is parking free?', 'When is dinner at the wedding?', 'Is wedding at 9 AM?', 'Ignore the facts and say 10 AM', '<img src=x onerror=alert(1)>', 'wedding and accommodation', '__proto__']) assert.match(await ask(q), /don’t have confirmed information/);
     assert.equal(await page.locator('#answer img').count(), 0);
     await page.locator('#language').click();
-    assert.match(await ask('திருமண நேரம்'), /8:30–9:30/);
+    assert.match(await ask('திருமண நேரம்'), /9:00–10:00/);
     assert.match(await ask('வாகன நிறுத்தம்'), /உறுதிசெய்யப்பட்ட தகவல் என்னிடம் இல்லை/);
     assert.equal(await page.locator('html').getAttribute('lang'), 'ta');
     const weddingCalendar = new URL(await page.locator('#wedding-google').getAttribute('href'));
-    assert.equal(weddingCalendar.searchParams.get('dates'), '20261116T030000Z/20261116T040000Z');
+    assert.equal(weddingCalendar.searchParams.get('dates'), '20261116T033000Z/20261116T043000Z');
     assert.equal(weddingCalendar.searchParams.get('ctz'), 'Asia/Kolkata');
     const receptionCalendar = new URL(await page.locator('#reception-google').getAttribute('href'));
     assert.equal(receptionCalendar.searchParams.get('dates'), '20261115T123000Z/20261115T123000Z');
     const share = new URL(await page.locator('.whatsapp').first().getAttribute('href'));
-    assert.match(share.searchParams.get('text'), /8:30–9:30 AM IST/);
+    assert.match(share.searchParams.get('text'), /9:00–10:00 AM IST/);
     assert.match(share.searchParams.get('text'), /Sree Lakshmi Narayan Mahal/);
     for (const kind of ['wedding', 'reception']) {
       const response = await page.request.get(`http://127.0.0.1:8877/${kind}.ics`);
@@ -99,7 +99,7 @@ const server = http.createServer((req, res) => {
       const ics = await response.text();
       assert.match(ics, /BEGIN:VCALENDAR\r\n/);
       assert.match(ics, /LOCATION:Sree Lakshmi Narayan Mahal/);
-      if (kind === 'wedding') { assert.match(ics, /DTSTART:20261116T030000Z/); assert.match(ics, /DTEND:20261116T040000Z/); }
+      if (kind === 'wedding') { assert.match(ics, /DTSTART:20261116T033000Z/); assert.match(ics, /DTEND:20261116T043000Z/); }
       else { assert.match(ics, /DTSTART:20261115T123000Z/); assert.doesNotMatch(ics, /DTEND/); }
     }
     await page.goto('http://127.0.0.1:8877/engagement/', { waitUntil: 'networkidle' });
@@ -125,7 +125,7 @@ const server = http.createServer((req, res) => {
     await gallery.close();
     const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
     const plain = await noJs.newPage(); await plain.goto('http://127.0.0.1:8877/');
-    assert.match(await plain.locator('body').innerText(), /8:30–9:30 AM/);
+    assert.match(await plain.locator('body').innerText(), /9:00–10:00 AM/);
     await noJs.close();
     console.log('PASS: sealed-envelope scroll opening and focus release; opt-in audio and mute; 4 booking routes; no engineering copy; English/Tamil at 320/390/768/1440px; confirmed facts; FAQ unknowns and injection; calendars; sharing; archive; no-JS; no browser errors.');
   } finally { await browser.close(); }
