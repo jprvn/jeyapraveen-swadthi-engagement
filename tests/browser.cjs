@@ -64,7 +64,7 @@ const server = http.createServer((req, res) => {
     await entrance.locator('#motion-toggle').click();
     assert.equal(await entrance.locator('body').evaluate(el=>el.classList.contains('motion-paused')),true);
     await entrance.close();
-    assert.match(await page.locator('body').innerText(), /JEYA PRAVEEN & SWADTHI/);
+    assert.match(await page.locator('body').innerText(), /Jeya Praveen V & Swadthi N G/);
     assert.equal(await page.locator('[data-maps]').first().getAttribute('href'), 'https://maps.app.goo.gl/uSTjdnq1pmb58Cub6');
     for (const width of [320, 390, 768, 1440]) {
       await page.setViewportSize({ width, height: 900 });
